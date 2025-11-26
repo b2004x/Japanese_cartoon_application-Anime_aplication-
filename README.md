@@ -362,11 +362,17 @@ cd ANIME-APP
 
 ### Characters Head detection
 -**The head detection can detect most of the face in the anime images**
+
 ![alt text](/test/New%20folder/76121l.jpg)
+
 -**It can can handle the case where the face is barely visible.**
+
 ![alt text](/test/test2/164032.jpg)
+
 -**Although all the training data was labeled on a color anime set, the algorithm generalizes well on line drawings.**
+
 ![alt text](/test/test2/Capture.PNG)
+
 ![alt text](/test/test2/detect_no_color2.PNG)
 
 ### Character classification
@@ -449,6 +455,7 @@ Step	Training Loss
 80000	0.250100
 ```
 - **The model generate caption that decribe the anime images**
+
 ![alt text](/test/test2/caption.PNG)
 
 ### Tagging model
@@ -462,6 +469,7 @@ Step	Training Loss
      
 ```
 -**Train loss and validation loss for Resnet152**
+
 ![alt text](/test/test2/Resnet152.PNG)
 -**We can see that the train loss it reduce but the val lost increase after each epoch, this implies the model is overfitting**
 
@@ -488,20 +496,26 @@ npm run dev
 ![alt text](/test/test2/tab.PNG)
 
 -**List of favourites anime**
+
 ![alt text](/test/test2/Favourite.PNG)
+
 **Get recommend button to get recommend**
 
 -**Search anime based on genre and name**
+
 ![alt text](/test/test2/search.PNG)
 
 -**List of anime**
+
 ![alt text](/test/test2/List.PNG)
 **The star symbol to add new favourite anime**
 
 -**Anime character classification**
+
 ![alt text](/test/test2/classification_tab.PNG)
 
 -**Anime Taggs and caption**
+
 ![alt text](/test/test2/Tagging_and_caption.PNG)
 
 ## Referance
