@@ -316,6 +316,7 @@ cd ANIME-APP
 
 #### Hybrid system
 -**After calculate the metadata score and the cosin score, computes a hybrid score by combining two normalized score lists after multiply is with an alpha to determine with scores is more important than the other.** 
+
 ![alt text](test/test2/recommended%20equation.PNG)
 
 -**The final score will determine which anime is chosen for the recommendation**
@@ -356,8 +357,11 @@ cd ANIME-APP
 
 ### Recommended system
 -**The system recommened anime that in the same franchise with the original anime or have some of the same sypnosis**
+
 ![alt text](/test/test2/recommend_gundam.PNG)
+
 -**Recommend for football anime**
+
 ![alt text](/test/test2/sports.PNG)
 
 ### Characters Head detection
@@ -471,6 +475,7 @@ Step	Training Loss
 -**Train loss and validation loss for Resnet152**
 
 ![alt text](/test/test2/Resnet152.PNG)
+
 -**We can see that the train loss it reduce but the val lost increase after each epoch, this implies the model is overfitting**
 
 -**Because the Danboruu_Resnet50 pretrain model achieves the best performance, we selected it as the main model for tagging task**
