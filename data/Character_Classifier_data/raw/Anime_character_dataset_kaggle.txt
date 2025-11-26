@@ -1,0 +1,2 @@
+https://www.kaggle.com/datasets/nguyengiabach1810/anime-character-classification-2
+https://www.kaggle.com/datasets/lngthnhan/anime-character-classes

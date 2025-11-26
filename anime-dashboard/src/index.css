@@ -1,0 +1,79 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000; /* black background */
+  color: #fff; /* white text */
+}
+
+/* Search bar */
+input[type="text"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  width: 50%;
+  margin: 20px auto;
+  display: block;
+  font-size: 16px;
+}
+
+/* Genre filter checkboxes */
+label {
+  background: #111;
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+label:hover {
+  background: #222;
+}
+
+/* Anime grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Anime card */
+.anime-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.anime-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.8);
+}
+
+.anime-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.anime-card h2 {
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  color: #ffcc00; /* gold title */
+}
+.genre-tag {
+  background: #222;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+.genre-tag.active {
+  background: #ffcc00;
+  color: #000;
+}

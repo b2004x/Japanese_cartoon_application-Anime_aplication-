@@ -1,0 +1,1 @@
+https://www.kaggle.com/code/bach1810/tagging-autotagger-resnet152-fine-tuned-first-half

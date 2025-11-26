@@ -1,0 +1,1 @@
+dataset: https://huggingface.co/datasets/none-yet/anime-captions/viewer/default/train?p=2&views%5B%5D=train

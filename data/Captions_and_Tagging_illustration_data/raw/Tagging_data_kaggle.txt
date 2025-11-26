@@ -1,0 +1,2 @@
+https://www.kaggle.com/datasets/mylesoneill/tagged-anime-illustrations
+https://www.kaggle.com/code/b2004x/anime-tagging-data-classes/output?scriptVersionId=267078021

@@ -1,0 +1,2 @@
+https://www.kaggle.com/datasets/lngthnhan/anime-character-preprocess-dataset
+https://www.kaggle.com/datasets/lngthnhan/anime-character-classes
