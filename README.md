@@ -484,6 +484,7 @@ npm run dev
 
 ## Front-end
 -**Three tab for different task**
+
 ![alt text](/test/test2/tab.PNG)
 
 -**List of favourites anime**
