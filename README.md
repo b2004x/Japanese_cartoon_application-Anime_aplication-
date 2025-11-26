@@ -178,7 +178,7 @@ data/
         ├── 201715.json
         └── 201716.json
 ```
--**json contain the label of the image**
+- **json contain the label of the image**
 
 ### Caption dataset
 - **dataset: https://huggingface.co/datasets/none-yet/anime-captions/viewer/default/train?p=2&views%5B%5D=train**
@@ -304,30 +304,30 @@ cd ANIME-APP
 
 **This system run divede in to two part:**
 #### Metadata Filtering
--**The first parts is metadata filtering, search for anime that have the same genres, type, episodes count, studios, duration, rating, score and producers with the original anime**
--**Each element used by the search system is assigned a specific weight. Elements with higher weights have a greater influence on the final results, reflecting their relative importance in the ranking process.**
--**Using jaccard similarity score to compare elements that have string value like genres, scaled similarity for elements that have numeric value type.**
--**After comparing, multiply the elements score with their respective weights And calculate the total for the final score**
--**This score will determine how similar the anime is to the original anime**.
+- **The first parts is metadata filtering, search for anime that have the same genres, type, episodes count, studios, duration, rating, score and producers with the original anime**
+- **Each element used by the search system is assigned a specific weight. Elements with higher weights have a greater influence on the final results, reflecting their relative importance in the ranking process.**
+- **Using jaccard similarity score to compare elements that have string value like genres, scaled similarity for elements that have numeric value type.**
+- **After comparing, multiply the elements score with their respective weights And calculate the total for the final score**
+- **This score will determine how similar the anime is to the original anime**.
 
 #### Embeddings similarity
--**The second parts is embeddings similarity, using FAISS to embeddings anime sypnosis and compare to other animes.**
--**After embeddings sypnosis into high-dimensional vectors, using Cosine similarity to measures how similar two vectors are based on their direction, the higher the cosine similarity, the more similar the embeddings are.**
+- **The second parts is embeddings similarity, using FAISS to embeddings anime sypnosis and compare to other animes.**
+- **After embeddings sypnosis into high-dimensional vectors, using Cosine similarity to measures how similar two vectors are based on their direction, the higher the cosine similarity, the more similar the embeddings are.**
 
 #### Hybrid system
--**After calculate the metadata score and the cosin score, computes a hybrid score by combining two normalized score lists after multiply is with an alpha to determine with scores is more important than the other.** 
+- **After calculate the metadata score and the cosin score, computes a hybrid score by combining two normalized score lists after multiply is with an alpha to determine with scores is more important than the other.** 
 
 ![alt text](test/test2/recommended%20equation.PNG)
 
--**The final score will determine which anime is chosen for the recommendation**
+- **The final score will determine which anime is chosen for the recommendation**
 
 
 ## Character classification
--**The system predicts the character in the anime image by cropping the head of the character and feed it into classification model**
+- **The system predicts the character in the anime image by cropping the head of the character and feed it into classification model**
 
 ### Characters Head detection
--**Using the head detector repository on github to detect the head of the characters**
--**This repository use Yolo-V3 to detect multiple character head in an image**
+- **Using the head detector repository on github to detect the head of the characters**
+- **This repository use Yolo-V3 to detect multiple character head in an image**
 
 **Github: https://github.com/grapeot/AnimeHeadDetector**
 
@@ -335,52 +335,52 @@ cd ANIME-APP
 
 **Choosing one of the five model below after evalutate their performance for the main model**
 
--**A Vision Transformer (ViT) neural network that applies the transformer architecture directly to image patches, enabling powerful, scalable image understanding without traditional convolutional layers.**
+- **A Vision Transformer (ViT) neural network that applies the transformer architecture directly to image patches, enabling powerful, scalable image understanding without traditional convolutional layers.**
 
--**ResNet-50 a 50-layer deep convolutional neural network that uses residual connections to make training very deep models easier and more accurate.**
+- **ResNet-50 a 50-layer deep convolutional neural network that uses residual connections to make training very deep models easier and more accurate.**
 
--**EfficientNet-B0 a convolutional neural network that achieves strong accuracy with low computational cost by uniformly scaling depth, width, and resolution using a compound scaling method.**
+- **EfficientNet-B0 a convolutional neural network that achieves strong accuracy with low computational cost by uniformly scaling depth, width, and resolution using a compound scaling method.**
 
 ## Caption and tagging 
 
 ### Caption
--**BLIP (Bootstrapping Language–Image Pre-training) a multimodal model that learns to connect images and text using a mix of captioning, image–text matching, and contrastive learning, enabling tasks like caption generation, visual question answering, and image–text retrieval.**
+- **BLIP (Bootstrapping Language–Image Pre-training) a multimodal model that learns to connect images and text using a mix of captioning, image–text matching, and contrastive learning, enabling tasks like caption generation, visual question answering, and image–text retrieval.**
 
 ### Tagging
 **The tagging system can tags up to 500 tag label using a multi-label models**
 **Choosing one of the three model below after evalutate their performance for the main model**
--**ResNet-50 a 50-layer deep convolutional neural network that uses residual connections to make training very deep models easier and more accurate**
--**Danboruu_Resnet50 is a pretrain model using the danbooru2018 and can predicts up to 6000 tags**
--**ResNet-152 a very deep convolutional neural network with 152 layers that uses residual (skip) connections to enable efficient training and achieve strong performance on complex image recognition can classification tasks.**
+- **ResNet-50 a 50-layer deep convolutional neural network that uses residual connections to make training very deep models easier and more accurate**
+- **Danboruu_Resnet50 is a pretrain model using the danbooru2018 and can predicts up to 6000 tags**
+- **ResNet-152 a very deep convolutional neural network with 152 layers that uses residual (skip) connections to enable efficient training and achieve strong performance on complex image recognition can classification tasks.**
 
 ## Model evaluation
 
 ### Recommended system
--**The system recommened anime that in the same franchise with the original anime or have some of the same sypnosis**
+- **The system recommened anime that in the same franchise with the original anime or have some of the same sypnosis**
 
 ![alt text](/test/test2/recommend_gundam.PNG)
 
--**Recommend for football anime**
+- **Recommend for football anime**
 
 ![alt text](/test/test2/sports.PNG)
 
 ### Characters Head detection
--**The head detection can detect most of the face in the anime images**
+- **The head detection can detect most of the face in the anime images**
 
 ![alt text](/test/New%20folder/76121l.jpg)
 
--**It can can handle the case where the face is barely visible.**
+- **It can can handle the case where the face is barely visible.**
 
 ![alt text](/test/test2/164032.jpg)
 
--**Although all the training data was labeled on a color anime set, the algorithm generalizes well on line drawings.**
+- **Although all the training data was labeled on a color anime set, the algorithm generalizes well on line drawings.**
 
 ![alt text](/test/test2/Capture.PNG)
 
 ![alt text](/test/test2/detect_no_color2.PNG)
 
 ### Character classification
--**Model Evaluation base on train/test/val dataset**
+- **Model Evaluation base on train/test/val dataset**
 
 ```
                          Resnet50   EfficientNetB0  Vision_Transformer  
@@ -391,7 +391,7 @@ cd ANIME-APP
      
 ```
 
--**Because the Vision Transformer model achieves the best performance, we selected it as the main model**
+- **Because the Vision Transformer model achieves the best performance, we selected it as the main model**
 
 ### Caption model
 ```
@@ -463,7 +463,7 @@ Step	Training Loss
 ![alt text](/test/test2/caption.PNG)
 
 ### Tagging model
--**Model Evaluation base on train/test/val dataset**
+- **Model Evaluation base on train/test/val dataset**
 ```
                          Resnet50   Danboruu_Resnet50  Resnet152 
 
@@ -472,23 +472,23 @@ Step	Training Loss
     F1 Score              0.4774        0.7959           0.3419      
      
 ```
--**Train loss and validation loss for Resnet152**
+- **Train loss and validation loss for Resnet152**
 
 ![alt text](/test/test2/Resnet152.PNG)
 
--**We can see that the train loss it reduce but the val lost increase after each epoch, this implies the model is overfitting**
+- **We can see that the train loss it reduce but the val lost increase after each epoch, this implies the model is overfitting**
 
--**Because the Danboruu_Resnet50 pretrain model achieves the best performance, we selected it as the main model for tagging task**
+- **Because the Danboruu_Resnet50 pretrain model achieves the best performance, we selected it as the main model for tagging task**
 
 ## Instruction how to use the repo
--**Working directory is ANIME-APP**
--**After cloning the repository**
--**Activate backend**
+- **Working directory is ANIME-APP**
+- **After cloning the repository**
+- **Activate backend**
 ```
 cd src
 uvicorn api:app --reload
 ```
--**Open front-end in another terminal**
+- **Open front-end in another terminal**
 
 ```
 cd anime-dashboard
@@ -496,33 +496,33 @@ npm run dev
 ```
 
 ## Front-end
--**Three tab for different task**
+- **Three tab for different task**
 
 ![alt text](/test/test2/tab.PNG)
 
--**List of favourites anime**
+- **List of favourites anime**
 
 ![alt text](/test/test2/Favourite.PNG)
 
 **Get recommend button to get recommend**
 
--**Search anime based on genre and name**
+- **Search anime based on genre and name**
 
 ![alt text](/test/test2/search.PNG)
 
--**List of anime**
+- **List of anime**
 
 ![alt text](/test/test2/List.PNG)
 **The star symbol to add new favourite anime**
 
--**Anime character classification**
+- **Anime character classification**
 
 ![alt text](/test/test2/classification_tab.PNG)
 
--**Anime Taggs and caption**
+- **Anime Taggs and caption**
 
 ![alt text](/test/test2/Tagging_and_caption.PNG)
 
 ## Referance
--**https://github.com/grapeot/AnimeHeadDetector**
--**https://gwern.net/danbooru2021**
+- **https://github.com/grapeot/AnimeHeadDetector**
+- **https://gwern.net/danbooru2021**
