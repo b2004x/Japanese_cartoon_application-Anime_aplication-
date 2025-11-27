@@ -1,15 +1,15 @@
-# An anime application for providing recommendations, classifying characters, tagging illustrations, and generating captions
+# An anime application for providing recommendations, classifying characters, tagging illustrations, and generating captions.
 
 ## Description
-- **An anime application for providing recommendations, classifying characters, tagging illustrations, and generating captions. This is a personal project that I am very passionate about**
+- **An anime application for providing recommendations, classifying characters, tagging illustrations, and generating captions. This is a personal project that I am very passionate about.**
 
 ## This project divede into Three parts:
 
 ### Anime Recommendation system:
-- **This system automatically recommends anime similar to your favorite titles by leveraging word embeddings and metadata filtering. This allows you to always find new and fresh anime titles that suit your preferences**
+- **This system automatically recommends anime similar to your favorite titles by leveraging word embeddings and metadata filtering. This allows you to always find new and fresh anime titles that suit your preferences.**
 
 ### Character classification:
-- **This module predict multiple charactes in an anime images using deep learning model and machine learning techniques. It analyzes the visual features and metadata to classify the character accurately based on an existing database**
+- **This module predict multiple charactes in an anime images using deep learning model and machine learning techniques. It analyzes the visual features and metadata to classify the character accurately based on an existing database.**
 
 ### illustrations tagging and generating caption:
 - **This system automatically tags illustrations with relevant keywords and generates descriptive captions using deep learning model. Helping artists save time, effort and get their work discovered more easily.**
@@ -240,8 +240,8 @@ anime_captions/
 
 
 ```
-- **You can use the dataset directly from the HuggingFace website without downloaded it**- 
-- **The data contain images and text(the caption belong to the image)**
+- **You can use the dataset directly from the HuggingFace website without downloaded it.**
+- **The data contain images and text(the caption belong to the image).**
 
 
 ## Tech stark 
@@ -304,11 +304,11 @@ git clone https://github.com/b2004x/Japanese_cartoon_application-Anime_aplicatio
 
 **This system run divede in to two part:**
 #### Metadata Filtering
-- **The first parts is metadata filtering, search for anime that have the same genres, type, episodes count, studios, duration, rating, score and producers with the original anime**
+- **The first parts is metadata filtering, search for anime that have the same genres, type, episodes count, studios, duration, rating, score and producers with the original anime.**
 - **Each element used by the search system is assigned a specific weight. Elements with higher weights have a greater influence on the final results, reflecting their relative importance in the ranking process.**
 - **Using jaccard similarity score to compare elements that have string value like genres, scaled similarity for elements that have numeric value type.**
 - **After comparing, multiply the elements score with their respective weights And calculate the total for the final score**
-- **This score will determine how similar the anime is to the original anime**.
+- **This score will determine how similar the anime is to the original anime.**.
 
 #### Embeddings similarity
 - **The second parts is embeddings similarity, using FAISS to embeddings anime sypnosis and compare to other animes.**
@@ -319,21 +319,21 @@ git clone https://github.com/b2004x/Japanese_cartoon_application-Anime_aplicatio
 
 ![alt text](test/test2/recommended%20equation.PNG)
 
-- **The final score will determine which anime is chosen for the recommendation**
+- **The final score will determine which anime is chosen for the recommendation.**
 
 
 ## Character classification
-- **The system predicts the character in the anime image by cropping the head of the character and feed it into classification model**
+- **The system predicts the character in the anime image by cropping the head of the character and feed it into classification model.**
 
 ### Characters Head detection
-- **Using the head detector repository on github to detect the head of the characters**
-- **This repository use Yolo-V3 to detect multiple character head in an image**
+- **Using the head detector repository on github to detect the head of the characters.**
+- **This repository use Yolo-V3 to detect multiple character head in an image.**
 
 **Github: https://github.com/grapeot/AnimeHeadDetector**
 
 ### Characters Classification
 
-**Choosing one of the five model below after evalutate their performance for the main model**
+**Choosing one of the five model below after evalutate their performance for the main model.**
 
 - **A Vision Transformer (ViT) neural network that applies the transformer architecture directly to image patches, enabling powerful, scalable image understanding without traditional convolutional layers.**
 
@@ -347,25 +347,25 @@ git clone https://github.com/b2004x/Japanese_cartoon_application-Anime_aplicatio
 - **BLIP (Bootstrapping Language–Image Pre-training) a multimodal model that learns to connect images and text using a mix of captioning, image–text matching, and contrastive learning, enabling tasks like caption generation, visual question answering, and image–text retrieval.**
 
 ### Tagging
-**The tagging system can tags up to 500 tag label using a multi-label models**
-**Choosing one of the three model below after evalutate their performance for the main model**
-- **ResNet-50 a 50-layer deep convolutional neural network that uses residual connections to make training very deep models easier and more accurate**
-- **Danboruu_Resnet50 is a pretrain model using the danbooru2018 and can predicts up to 6000 tags**
+**The tagging system can tags up to 500 tag label using a multi-label models.**
+**Choosing one of the three model below after evalutate their performance for the main model.**
+- **ResNet-50 a 50-layer deep convolutional neural network that uses residual connections to make training very deep models easier and more accurate.**
+- **Danboruu_Resnet50 is a pretrain model using the danbooru2018 and can predicts up to 6000 tags.**
 - **ResNet-152 a very deep convolutional neural network with 152 layers that uses residual (skip) connections to enable efficient training and achieve strong performance on complex image recognition can classification tasks.**
 
 ## Model evaluation
 
 ### Recommended system
-- **The system recommened anime that in the same franchise with the original anime or have some of the same sypnosis**
+- **The system recommened anime that in the same franchise with the original anime or have some of the same sypnosis.**
 
 ![alt text](/test/test2/recommend_gundam.PNG)
 
-- **Recommend for football anime**
+- **Recommend for football anime.**
 
 ![alt text](/test/test2/sports.PNG)
 
 ### Characters Head detection
-- **The head detection can detect most of the face in the anime images**
+- **The head detection can detect most of the face in the anime images.**
 
 ![alt text](/test/New%20folder/76121l.jpg)
 
@@ -380,7 +380,7 @@ git clone https://github.com/b2004x/Japanese_cartoon_application-Anime_aplicatio
 ![alt text](/test/test2/detect_no_color2.PNG)
 
 ### Character classification
-- **Model Evaluation base on train/test/val dataset**
+- **Model Evaluation base on train/test/val dataset.**
 
 ```
                          Resnet50   EfficientNetB0  Vision_Transformer  
@@ -391,7 +391,7 @@ git clone https://github.com/b2004x/Japanese_cartoon_application-Anime_aplicatio
      
 ```
 
-- **Because the Vision Transformer model achieves the best performance, we selected it as the main model**
+- **Because the Vision Transformer model achieves the best performance, we selected it as the main model.**
 
 ### Caption model
 ```
@@ -463,7 +463,7 @@ Step	Training Loss
 ![alt text](/test/test2/caption.PNG)
 
 ### Tagging model
-- **Model Evaluation base on train/test/val dataset**
+- **Model Evaluation base on train/test/val dataset.**
 ```
                          Resnet50   Danboruu_Resnet50  Resnet152 
 
@@ -472,13 +472,13 @@ Step	Training Loss
     F1 Score              0.4774        0.7959           0.3419      
      
 ```
-- **Train loss and validation loss for Resnet152**
+- **Train loss and validation loss for Resnet152.**
 
 ![alt text](/test/test2/Resnet152.PNG)
 
-- **We can see that the train loss it reduce but the val lost increase after each epoch, this implies the model is overfitting**
+- **We can see that the train loss it reduce but the val lost increase after each epoch, this implies the model is overfitting.**
 
-- **Because the Danboruu_Resnet50 pretrain model achieves the best performance, we selected it as the main model for tagging task**
+- **Because the Danboruu_Resnet50 pretrain model achieves the best performance, we selected it as the main model for tagging task.**
 
 ## Instruction how to use the repo
 - **Working directory is ANIME-APP**
