@@ -15,12 +15,12 @@
 - **This system automatically tags illustrations with relevant keywords and generates descriptive captions using deep learning model. Helping artists save time, effort and get their work discovered more easily.**
 
 ## Features
-- **Find and save user favourite anime in database**
-- **Show anime details**
-- **Recommend anime based on user favourite anime**
-- **Detect multiple human faces in anime images, drawing bounding box around the face and predict the character**
+- **Find and save user favourite anime in database.**
+- **Show anime details.**
+- **Recommend anime based on user favourite anime.**
+- **Detect multiple human faces in anime images, drawing bounding box around the face and predict the character.**
 - **Automatically tag illustrations with relevant keywords.**
-- **Generate descriptive captions for anime images**
+- **Generate descriptive captions for anime images.**
 
 ## Sample
 ### Anime search by genre and name
