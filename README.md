@@ -513,6 +513,7 @@ npm run dev
 - **List of anime**
 
 ![alt text](/test/test2/List.PNG)
+
 **The star symbol to add new favourite anime**
 
 - **Anime character classification**
