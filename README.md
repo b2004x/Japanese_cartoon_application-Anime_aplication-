@@ -294,8 +294,8 @@ anime_captions/
 
 ## Installation
 ```
-git clone
-cd ANIME-APP
+git clone https://github.com/b2004x/Japanese_cartoon_application-Anime_aplication-
+
 ```
 
 ## Model Details
